@@ -65,7 +65,7 @@ async function fetchSecurityReports() {
 		await notifyDiscord({
 			title: '⚠️ Security Bulletin Error',
 			description:
-				'An error occurred while fetching security reports.\n\n[See GitHub Actions logs for details](https://github.com/withastro/we-have-a-problem/actions)',
+				'An error occurred while fetching security reports.\n\n[See GitHub Actions logs for details](https://github.com/withastro/nightly-bot/actions)',
 			accent: 'danger',
 		});
 		process.exit(1);

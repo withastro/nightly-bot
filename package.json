@@ -1,5 +1,5 @@
 {
-	"name": "we-have-a-problem",
+	"name": "nightly-bot",
 	"version": "1.0.0",
 	"description": "Send GitHub security alerts to Discord via webhooks",
 	"type": "module",
