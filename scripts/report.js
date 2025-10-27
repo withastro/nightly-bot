@@ -62,6 +62,7 @@ async function fetchSecurityReports() {
 			],
 		});
 	} catch (error) {
+		console.error('Error fetching security reports:', error);
 		await notifyDiscord({
 			title: '⚠️ Security Bulletin Error',
 			description:
