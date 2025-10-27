@@ -8,7 +8,7 @@ fetchSecurityReports();
 async function fetchSecurityReports() {
 	try {
 		const response = await fetch(
-			`https://api.github.com/orgs/${ORG}/security-advisories?state=triage,draft&per_page=100`,
+			`https://api.github.com/orgs/${ORG}/security-advisories?per_page=100`,
 			{
 				headers: {
 					Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
