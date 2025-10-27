@@ -27,5 +27,5 @@ jobs:
       - name: Run report
         run: pnpm start
         env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_SECURITY_CHANNEL }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          GITHUB_TOKEN: ${{ secrets.FREDKBOT_GITHUB_TOKEN }}
