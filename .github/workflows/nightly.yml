@@ -28,4 +28,4 @@ jobs:
         run: pnpm start
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          GITHUB_TOKEN: ${{ secrets.FREDKBOT_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.NIGHTLY_GITHUB_TOKEN }}
