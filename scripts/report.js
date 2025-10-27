@@ -26,6 +26,7 @@ async function fetchSecurityReports() {
 		const now = Date.now();
 		const newReports = [];
 		const needTriage = [];
+		const drafts = [];
 
 		for (const advisory of advisories) {
 			const createdAt = new Date(advisory.created_at).getTime();
@@ -36,6 +37,8 @@ async function fetchSecurityReports() {
 				newReports.push(advisory);
 			} else if (advisory.state === 'triage') {
 				needTriage.push(advisory);
+			} else if (advisory.state === 'draft') {
+				drafts.push(advisory);
 			}
 		}
 
@@ -59,6 +62,9 @@ async function fetchSecurityReports() {
 						? needTriage.map(advisoryListItem).join('\n')
 						: 'All reports triaged! ✅',
 				},
+				...(drafts.length
+					? [{ name: 'Unpublished drafts', value: drafts.map(advisoryListItem).join('\n') }]
+					: []),
 			],
 		});
 	} catch (error) {
