@@ -42,6 +42,11 @@ async function fetchSecurityReports() {
 			}
 		}
 
+		if (newReports.length === 0 && needTriage.length === 0 && drafts.length === 0) {
+			console.log('No security advisories to notify about.');
+			return;
+		}
+
 		await notifyDiscord({
 			title: '🤖 Security Bulletin',
 			description:
