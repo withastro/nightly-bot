@@ -49,10 +49,7 @@ async function fetchSecurityReports() {
 
 		await notifyDiscord({
 			title: '🤖 Security Bulletin',
-			description:
-				newReports.length + needTriage.length > 0
-					? 'Here’s your daily security update:'
-					: 'It’s quiet — too quiet…\n\nNo new security reports or triage needed! 🎉',
+			description: 'Here’s your daily security update:',
 			accent: newReports.length > 0 ? 'danger' : needTriage.length > 0 ? 'caution' : undefined,
 			fields: [
 				{
